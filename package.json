@@ -1,0 +1,19 @@
+{
+  "name": "start-PostCSS-with-BrowserSync",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": {},
+  "license": "MIT",
+  "scripts": {
+    "clean": "rm -rf public/css",
+    "watch:postcss": "postcss -u autoprefixer -w -d public/css src/css/*.css",
+    "browserSync": "browser-sync start -c bs-config.js",
+    "serve": "run-p watch:postcss browserSync"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.7.6",
+    "browser-sync": "^2.18.8",
+    "npm-run-all": "^4.0.2",
+    "postcss-cli": "2"
+  }
+}
